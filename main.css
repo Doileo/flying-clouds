@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #87ceeb;
+  overflow: hidden;
+}
+
+.sky {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/sky.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.cloud {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  opacity: 0.8;
+}
+
+.cloud1,
+.cloud2,
+.cloud3 {
+  width: 120px;
+  height: 80px;
+}
+
+.cloud1::before,
+.cloud1::after,
+.cloud2::before,
+.cloud2::after,
+.cloud3::before,
+.cloud3::after {
+  content: "";
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.cloud1::before {
+  top: -30px;
+  left: 10px;
+  width: 100px;
+  height: 70px;
+}
+.cloud1::after {
+  top: -20px;
+  left: 30px;
+  width: 80px;
+  height: 50px;
+}
+
+.cloud2::before {
+  top: -25px;
+  left: 15px;
+  width: 110px;
+  height: 75px;
+}
+.cloud2::after {
+  top: -15px;
+  left: 35px;
+  width: 90px;
+  height: 60px;
+}
+
+.cloud3::before {
+  top: -30px;
+  left: 20px;
+  width: 120px;
+  height: 85px;
+}
+.cloud3::after {
+  top: -20px;
+  left: 40px;
+  width: 100px;
+  height: 70px;
+}
+
+.cloud1 {
+  top: 15%;
+  left: -150px;
+  animation: floatCloud1 25s linear infinite;
+}
+.cloud2 {
+  top: 40%;
+  left: -200px;
+  animation: floatCloud2 30s linear infinite;
+}
+.cloud3 {
+  top: 5%;
+  left: -250px;
+  animation: floatCloud3 35s linear infinite;
+}
+
+@keyframes floatCloud1 {
+  0% {
+    transform: translateX(-150px);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes floatCloud2 {
+  0% {
+    transform: translateX(-200px);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes floatCloud3 {
+  0% {
+    transform: translateX(-250px);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
